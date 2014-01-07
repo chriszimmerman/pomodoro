@@ -66,7 +66,7 @@ $(document).ready(function(){
     function countdown(){
         secondsLeft--;
         if(minutesLeft < 1 && secondsLeft < 1){
-            var snd = new Audio("assets/timer.wav");
+            var snd = isWork ? new Audio("assets/timer.wav") : new Audio("assets/buzzer.mp3");
             snd.play();
             initializeTimer();
         }
